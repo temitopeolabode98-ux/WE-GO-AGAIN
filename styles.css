@@ -70,7 +70,7 @@ footer {
 .hero {
   max-width: 900px;
   margin: 40px auto;
-  padding: 60px 20px;
+  padding: 48px 20px;
   background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   color: white;
   border-radius: 12px;
@@ -80,7 +80,7 @@ footer {
 .hero-text h2 {
   max-width: 680px;
   margin: 8px auto 16px;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.05;
 }
 
@@ -300,11 +300,12 @@ footer {
   }
 
   .hero {
-    padding: 40px 15px;
+    margin: 24px auto;
+    padding: 36px 16px;
   }
 
   .hero-text h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   main {
@@ -442,7 +443,7 @@ footer {
 }
 .topbar {
   position: relative;
-  padding: 10px 15px;
+  padding: 12px 20px;
 }
 
 .menu-toggle {
@@ -476,4 +477,21 @@ footer {
   width: auto;
   margin: 0;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 10px 14px;
+  }
+
+  .logo-area h1 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .navbar {
+    left: 14px;
+    right: 14px;
+    min-width: 0;
+  }
 }
