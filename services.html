@@ -3,35 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Murth-help</title>
+  <title>Services - Murthe-help</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- paste the same header/nav here -->
+  <header class="topbar">
+    <div class="logo-area">
+      <img src="images/img 1.png" alt="Murthe-help logo" class="logo">
+      <h1>Murthe-help</h1>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar" id="site-navigation">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="services.html" class="nav-btn">Services</a>
+      <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+  </header>
 
   <main>
     <section id="services">
       <h2>Our Services</h2>
+      <p>We help individuals, small businesses, and growing brands build a clear and reliable online presence. Choose the support you need, from a fresh website to ongoing improvements.</p>
       <div class="services-grid">
         <article class="service-card">
           <h3>Web Design</h3>
-          <p>Clean and simple website layouts for your brand.</p>
+          <p>Clean, modern page layouts that reflect your brand and make it easy for visitors to find what they need.</p>
         </article>
 
         <article class="service-card">
           <h3>Web Development</h3>
-          <p>Functional websites built with HTML, CSS, and JavaScript.</p>
+          <p>Fast, responsive websites built with HTML, CSS, and JavaScript for a smooth experience on phones, tablets, and computers.</p>
         </article>
 
         <article class="service-card">
-          <h3>Support</h3>
-          <p>Help with updates, edits, and improvements.</p>
+          <h3>Business Websites</h3>
+          <p>Professional websites for services, portfolios, organizations, and small businesses that need to look credible online.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Website Updates</h3>
+          <p>Content edits, new sections, image changes, and layout improvements that keep your website current and useful.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Mobile Optimization</h3>
+          <p>Responsive adjustments that help your pages load clearly and remain easy to use on smaller screens.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Technical Support</h3>
+          <p>Practical help with website issues, navigation, styling, deployment, and simple improvements after launch.</p>
         </article>
       </div>
     </section>
+
+    <section class="service-cta">
+      <h2>Ready to improve your website?</h2>
+      <p>Tell us what you need, and we will help you choose the right service for your next step.</p>
+      <a href="contact.html" class="hero-btn">Contact Us</a>
+    </section>
   </main>
 
-  <!-- paste footer here -->
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2026 Murthe-help</p>
+  </footer>
 </body>
 </html>

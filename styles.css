@@ -145,6 +145,24 @@ footer {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.service-card h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+.service-card p {
+  line-height: 1.6;
+}
+
+.service-cta {
+  text-align: center;
+  background: #e0ecff;
+}
+
+.service-cta p {
+  margin-bottom: 24px;
+}
+
 .contact-form {
   display: grid;
   gap: 15px;
