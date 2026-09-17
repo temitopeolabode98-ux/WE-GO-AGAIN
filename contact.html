@@ -3,25 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Murth-help</title>
+  <title>Contact Murthe-help | Start a Project</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- paste the same header/nav here -->
+  <header class="topbar">
+    <div class="logo-area">
+      <img src="images/img 1.png" alt="Murthe-help logo" class="logo">
+      <h1>Murthe-help</h1>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar" id="site-navigation">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="services.html" class="nav-btn">Services</a>
+      <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+  </header>
 
   <main>
-    <section id="contact">
-      <h2>Contact Us</h2>
+    <section class="contact-layout" id="contact">
+      <div class="contact-intro">
+        <p class="eyebrow">Let’s work together</p>
+        <h2>Tell us what you’re building.</h2>
+        <p>Whether you need a new website, a fresh direction, or help improving what you already have, send us a few details and we’ll help you find the right next step.</p>
+
+        <div class="contact-details">
+          <div><strong>Email</strong><a href="mailto:temitopeolabode98@gmail.com">temitopeolabode98@gmail.com</a></div>
+          <div><strong>Response time</strong><span>Usually within 1 business day</span></div>
+          <div><strong>Good to know</strong><span>No confusing jargon. Just practical advice.</span></div>
+        </div>
+      </div>
+
       <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Smith" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="service">What can we help with?</label>
+          <select id="service" name="service">
+            <option value="">Choose a service</option>
+            <option>New website</option>
+            <option>Website redesign</option>
+            <option>Website updates</option>
+            <option>Technical support</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" placeholder="Tell us about your goals, timeline, or what you need help with." rows="6" required></textarea>
+        </div>
+        <button type="submit">Send project enquiry</button>
+        <small>We’ll only use your details to respond to this enquiry.</small>
       </form>
     </section>
   </main>
 
-  <!-- paste footer here -->
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2026 Murthe-help</p>
+  </footer>
 </body>
 </html>
