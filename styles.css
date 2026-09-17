@@ -1,6 +1,5 @@
 /* RROT DESIGN TOKEN */
-:root {
-    body {
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f7fb;
@@ -209,8 +208,21 @@ footer {
 }
 
 .navbar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 15px;
+  z-index: 10;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+  padding: 12px;
+  background: #1e3a8a;
+  border-radius: 0 0 8px 8px;
+}
+
+.navbar.active {
   display: flex;
-  gap: 12px;
 }
 
 .nav-btn {
@@ -227,6 +239,39 @@ footer {
   background: #dbeafe;
 }
 .topbar {
+  position: relative;
   padding: 10px 15px;
 }
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: white;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: #2563eb;
+}
+
+.navbar .nav-btn {
+  width: auto;
+  margin: 0;
+  text-align: center;
 }

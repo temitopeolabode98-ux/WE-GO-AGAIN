@@ -8,5 +8,6 @@ if (menuToggle && navbar) {
     navbar.classList.toggle("active");
     const expanded = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!expanded));
+    menuToggle.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
   });
 }
