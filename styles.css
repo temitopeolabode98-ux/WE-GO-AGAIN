@@ -259,6 +259,26 @@ footer {
   line-height: 1.5;
 }
 
+.form-status {
+  min-height: 1.5em;
+  margin: 4px 0 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.form-status.success {
+  color: #166534;
+}
+
+.form-status.error {
+  color: #b91c1c;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 @media (max-width: 700px) {
   .process-grid,
   .contact-layout {
