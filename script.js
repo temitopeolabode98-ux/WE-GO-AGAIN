@@ -14,6 +14,7 @@ if (menuToggle && navbar) {
 
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
+const contactApiUrl = document.querySelector('meta[name="contact-api-url"]')?.content.trim() || "/api/contact";
 
 if (contactForm && formStatus) {
   contactForm.addEventListener("submit", async (event) => {
@@ -24,7 +25,7 @@ if (contactForm && formStatus) {
     formStatus.className = "form-status";
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(contactApiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),

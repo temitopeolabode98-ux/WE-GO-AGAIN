@@ -5,7 +5,13 @@
   "description": "Murthe-help website and contact enquiry server",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check server.js && node --check script.js",
+    "check": "node --check server.js && node --check script.js && node --check api/contact.js && node --check api/health.js",
     "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0"
   }
 }
