@@ -14,7 +14,6 @@ if (menuToggle && navbar) {
 
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
-const contactApiUrl = document.querySelector('meta[name="contact-api-url"]')?.content.trim() || "/api/contact";
 
 if (contactForm && formStatus) {
   contactForm.addEventListener("submit", async (event) => {
@@ -25,13 +24,17 @@ if (contactForm && formStatus) {
     formStatus.className = "form-status";
 
     try {
-      const response = await fetch(contactApiUrl, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
       });
       const responseText = await response.text();
       let result = {};
+
+      if (response.status === 405) {
+        throw new Error(`This page is being served from ${window.location.origin}, which does not handle contact requests. Open http://127.0.0.1:3000/contact.html while the app server is running.`);
+      }
 
       if (!responseText) {
         throw new Error(`The server returned an empty response (${response.status}). Start it with npm start and try again.`);
