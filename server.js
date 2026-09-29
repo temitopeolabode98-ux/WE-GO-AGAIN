@@ -167,8 +167,8 @@ const server = http.createServer(async (request, response) => {
 });
 
 if (require.main === module) {
-  if (process.versions.node.split(".").map(Number)[0] < 18) {
-    console.error("Node.js 18 or newer is required.");
+  if (process.versions.node.split(".").map(Number)[0] < 20) {
+    console.error("Node.js 20 or newer is required.");
     process.exit(1);
   }
 
